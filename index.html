@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jade Kendra Marquez | Bookkeeping and Virtual Assistant Portfolio</title>
+<meta name="description" content="Jade Kendra Marquez, accountancy graduate: bookkeeping, reconciliation, Excel reporting and virtual assistant work samples.">
+<meta property="og:title" content="Jade Kendra Marquez | Portfolio">
+<meta property="og:description" content="Bookkeeping, reconciliation, Excel reporting and virtual assistant work samples.">
+<meta property="og:image" content="images/photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --teal:#0f766e; --teal-dark:#115e59; --teal-soft:#e6f4f1; --mint:#ccfbf1; --ink:#16302e; --muted:#5a6d6b; --line:#dcebe7; --bg:#f5fbf9; --sand:#fbf7f1; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family:Inter, "Segoe UI", Arial, sans-serif; color:var(--ink); background:#fff; line-height:1.6; overflow-wrap:anywhere; }
+  h1, h2, h3, h4, .brand { font-family:Poppins, "Segoe UI", Arial, sans-serif; }
+  a { color:var(--teal); }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 24px; }
+  .grid > *, .skills > * { min-width:0; }
+
+  nav { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  nav .wrap { display:flex; justify-content:space-between; align-items:center; height:62px; }
+  .brand { font-weight:700; color:var(--teal-dark); text-decoration:none; font-size:17px; }
+  .brand span { color:var(--teal); }
+  nav .links a { margin-left:24px; text-decoration:none; color:var(--muted); font-size:15px; font-weight:500; }
+  nav .links a:hover { color:var(--teal); }
+
+  header { position:relative; overflow:hidden; background:linear-gradient(160deg,#f0faf7 0%,#ffffff 60%); padding:80px 0 72px; }
+  header::before, header::after { content:""; position:absolute; border-radius:50%; filter:blur(2px); }
+  header::before { width:420px; height:420px; right:-120px; top:-140px; background:radial-gradient(circle,#99e2d6 0%,rgba(153,226,214,0) 70%); }
+  header::after { width:300px; height:300px; left:-120px; bottom:-150px; background:radial-gradient(circle,#fde7c7 0%,rgba(253,231,199,0) 70%); }
+  header .wrap { position:relative; display:grid; grid-template-columns:1.35fr 1fr; gap:48px; align-items:center; }
+  .pill { display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--line); color:var(--teal-dark); font-size:13px; font-weight:600; padding:6px 14px; border-radius:999px; box-shadow:0 2px 8px rgba(15,118,110,.08); }
+  .pill i { width:8px; height:8px; border-radius:50%; background:#22c55e; box-shadow:0 0 0 4px rgba(34,197,94,.18); }
+  header h1 { font-size:48px; line-height:1.12; margin:18px 0 10px; color:var(--ink); }
+  header h1 em { font-style:normal; color:var(--teal); }
+  header .role { font-size:18px; color:var(--teal-dark); font-weight:500; margin:0 0 16px; }
+  header .intro { font-size:16.5px; color:var(--muted); max-width:560px; margin:0 0 28px; }
+  .btn { display:inline-block; background:var(--teal); color:#fff; padding:12px 22px; border-radius:10px; font-weight:600; text-decoration:none; margin:0 10px 10px 0; transition:transform .15s, box-shadow .15s, background .15s; box-shadow:0 6px 16px rgba(15,118,110,.22); }
+  .btn:hover { transform:translateY(-2px); background:var(--teal-dark); }
+  .btn.ghost { background:#fff; color:var(--teal-dark); border:1.5px solid var(--line); box-shadow:none; }
+  .btn.ghost:hover { border-color:var(--teal); background:#fff; }
+  .photo-wrap { position:relative; justify-self:center; width:300px; height:300px; }
+  .photo-wrap::before { content:""; position:absolute; inset:-14px; border-radius:50%; background:conic-gradient(from 200deg,#0f766e,#5eead4,#fde7c7,#0f766e); opacity:.55; }
+  .photo { position:relative; width:100%; height:100%; border-radius:50%; object-fit:cover; object-position:center 18%; border:8px solid #fff; box-shadow:0 20px 40px rgba(15,80,75,.18); }
+  .badge { position:absolute; background:#fff; border-radius:14px; padding:10px 14px; box-shadow:0 10px 24px rgba(15,80,75,.14); font-size:13px; color:var(--muted); line-height:1.3; }
+  .badge b { display:block; font-family:Poppins, sans-serif; font-size:17px; color:var(--teal-dark); }
+  .badge.b1 { left:-38px; bottom:34px; }
+  .badge.b2 { right:-30px; top:30px; }
+
+  .stats { margin-top:-1px; }
+  .stats .wrap { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; padding-top:8px; }
+  .stat { background:var(--bg); border:1px solid var(--line); border-radius:16px; padding:18px; text-align:center; }
+  .stat b { display:block; font-family:Poppins, sans-serif; font-size:22px; color:var(--teal-dark); }
+  .stat span { color:var(--muted); font-size:13.5px; }
+
+  section { padding:84px 0; }
+  .eyebrow { display:inline-block; font-size:12.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+  section h2 { font-size:34px; margin:0 0 10px; color:var(--ink); }
+  section .lead { color:var(--muted); margin:0 0 36px; max-width:640px; }
+
+  .skills { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .skill { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px; transition:transform .2s, box-shadow .2s, border-color .2s; }
+  .skill:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(15,80,75,.10); border-color:#bfe3dc; }
+  .icon { width:46px; height:46px; border-radius:12px; background:var(--teal-soft); color:var(--teal); display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .icon svg { width:24px; height:24px; }
+  .skill h3 { margin:0 0 6px; font-size:17px; }
+  .skill p { margin:0; color:var(--muted); font-size:14.5px; }
+
+  #experience { background:var(--sand); }
+  .timeline { position:relative; margin-left:8px; }
+  .timeline::before { content:""; position:absolute; left:7px; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--teal),#9fd8ce); }
+  .job { position:relative; padding-left:40px; margin-bottom:26px; }
+  .job::before { content:""; position:absolute; left:0; top:6px; width:16px; height:16px; border-radius:50%; background:#fff; border:4px solid var(--teal); }
+  .job .box { background:#fff; border:1px solid #efe6d8; border-radius:16px; padding:18px 22px; }
+  .job h3 { margin:0; font-size:18px; }
+  .job .meta { color:var(--muted); font-size:14.5px; margin:2px 0 8px; }
+  .job .meta b { color:var(--teal-dark); font-weight:600; }
+  .job ul { margin:0; padding-left:20px; color:#34504d; font-size:15px; }
+
+  .note { display:inline-block; background:var(--teal-soft); color:var(--teal-dark); padding:8px 14px; border-radius:10px; font-size:14px; margin-bottom:8px; }
+  .group { margin:40px 0 18px; }
+  .group h3 { font-size:21px; margin:0; }
+  .group p { margin:2px 0 0; color:var(--muted); font-size:15px; }
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:20px; overflow:hidden; display:flex; flex-direction:column; transition:transform .2s, box-shadow .2s; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 18px 36px rgba(15,80,75,.12); }
+  .preview { display:block; position:relative; height:220px; background:linear-gradient(160deg,#f2faf8,#eaf5f2); border-bottom:1px solid var(--line); overflow:hidden; }
+  .preview.img img { width:100%; height:100%; display:block; object-fit:contain; padding:16px; transition:transform .3s; }
+  .card:hover .preview.img img { transform:scale(1.03); }
+  .preview .zoom { position:absolute; right:12px; bottom:12px; background:rgba(15,118,110,.92); color:#fff; font-size:12px; padding:4px 10px; border-radius:20px; opacity:0; transition:opacity .15s; }
+  .preview.img:hover .zoom { opacity:1; }
+  .preview.text { padding:18px 22px; font-size:13.5px; color:#3a5451; }
+  .preview.text p { margin:0 0 6px; }
+  .preview.text ol { margin:0; padding-left:20px; }
+  .preview .subj { background:#fff; border:1px solid var(--line); padding:6px 10px; border-radius:8px; }
+  .body { padding:20px 24px 24px; display:flex; flex-direction:column; flex:1; }
+  .tag { align-self:flex-start; background:var(--teal-soft); color:var(--teal-dark); font-size:12px; font-weight:600; padding:3px 10px; border-radius:20px; margin-bottom:10px; }
+  .card h4 { margin:0 0 6px; font-size:19px; }
+  .card .task { margin:0 0 10px; color:var(--teal-dark); font-weight:500; font-size:15px; }
+  .card .how { margin:0 0 12px; font-size:14.5px; color:#3a5451; }
+  .card .tools { margin:0 0 16px; font-size:13px; color:var(--muted); padding-top:10px; border-top:1px dashed var(--line); }
+  .card .tools::before { content:"Tools: "; font-weight:600; color:var(--ink); }
+  .btn.small { margin-top:auto; align-self:flex-start; padding:9px 16px; font-size:14px; border-radius:9px; box-shadow:none; }
+  a.inline { white-space:nowrap; }
+  #work { background:var(--bg); }
+
+  footer { background:linear-gradient(150deg,#0f766e,#115e59); color:#fff; padding:72px 0 40px; text-align:center; }
+  footer h2 { font-size:34px; margin:0 0 10px; }
+  footer p { color:#d6f2ec; margin:0 0 24px; }
+  footer .btn { background:#fff; color:var(--teal-dark); box-shadow:none; }
+  footer .btn.ghost { background:transparent; color:#fff; border-color:rgba(255,255,255,.6); }
+  footer .contact { margin-top:22px; font-size:15px; color:#d6f2ec; }
+  footer .contact a { color:#fff; }
+  footer small { display:block; margin-top:40px; color:#9fd8ce; font-size:13px; }
+
+  @media (max-width:900px) {
+    header { padding:48px 0 56px; }
+    header .wrap { grid-template-columns:1fr; text-align:center; gap:40px; }
+    header .intro { margin-left:auto; margin-right:auto; }
+    .photo-wrap { order:-1; width:210px; height:210px; }
+    .badge { display:none; }
+    header h1 { font-size:36px; }
+    .stats .wrap { grid-template-columns:repeat(2,1fr); }
+    .skills, .grid { grid-template-columns:1fr; }
+    nav .links { display:none; }
+    section { padding:60px 0; }
+    section h2, footer h2 { font-size:28px; }
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#">Jade<span>.</span></a>
+  <div class="links"><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact">Contact</a></div></div></nav>
+
+<header><div class="wrap">
+  <div>
+    <span class="pill"><i></i> Open to full-time or part-time remote work</span>
+    <h1>Hi, I'm <em>Jade Kendra Marquez</em></h1>
+    <p class="role">Bookkeeping &middot; Reconciliation &middot; Virtual Assistant &middot; Ecommerce Support</p>
+    <p class="intro">Accountancy graduate with internship experience in audit, accounting and bookkeeping. I am careful with numbers, quick to learn new tools, and I like leaving every record cleaner than I found it.</p>
+    <a class="btn" href="#work">See my work</a>
+    <a class="btn ghost" href="mailto:pleoxa@gmail.com">Email me</a>
+    <a class="btn ghost" href="files/00 Portfolio Summary.docx" download>Download summary</a>
+  </div>
+  <div class="photo-wrap">
+    <img class="photo" src="images/photo.jpg" alt="Photo of Jade Kendra Marquez">
+    <div class="badge b1"><b>BSA 2026</b>Accountancy graduate</div>
+    <div class="badge b2"><b>10</b>work samples</div>
+  </div>
+</div></header>
+
+<div class="stats"><div class="wrap">
+  <div class="stat"><b>BSA 2026</b><span>AISAT College Dasmarinas</span></div>
+  <div class="stat"><b>3</b><span>Internships</span></div>
+  <div class="stat"><b>Excel &middot; QNE</b><span>Smart Pal &middot; EFPS</span></div>
+  <div class="stat"><b>10</b><span>Work samples</span></div>
+</div></div>
+
+<section id="skills"><div class="wrap">
+  <span class="eyebrow">What I do</span>
+  <h2>Skills, with proof</h2>
+  <p class="lead">Not just a list: this is where I have actually used each one.</p>
+  <div class="skills">
+    <div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h7"/><path d="m15 16 2 2 4-4"/></svg></div><h3>Bank reconciliation</h3><p>Monthly bank reconciliations during my audit internship at A.S Beltran and Associates.</p></div><div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg></div><h3>Bookkeeping software</h3><p>QNE System (payables, receivables, invoices, official receipts) and Smart Pal.</p></div><div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>Tax forms and filing</h3><p>Compensation, ITR and VAT forms, and filing through EFPS.</p></div><div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M7 9v6M17 9v6"/></svg></div><h3>Payroll</h3><p>Payroll summary for annual reporting.</p></div><div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 15h18M9 4v16M15 4v16"/></svg></div><h3>Microsoft Excel</h3><p>SUMIFS, INDEX and MATCH, IF logic, date math, conditional formatting, charts.</p></div><div class="skill"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Virtual assistance</h3><p>Inbox management, calendar setup, task tracking, SOP writing, customer emails.</p></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <span class="eyebrow">Where I've worked</span>
+  <h2>Experience</h2>
+  <p class="lead">On-the-job training during college and senior high school.</p>
+  <div class="timeline">
+    <div class="job"><div class="box"><h3>Audit Intern</h3><div class="meta"><b>A.S Beltran and Associates</b> &middot; Nov 2025 to Jan 2026</div><ul><li>Performed monthly bank reconciliations and flagged discrepancies.</li><li>Handled bookkeeping for a small-business client in QNE System.</li><li>Prepared payroll summaries and tax forms, filed through EFPS.</li></ul></div></div><div class="job"><div class="box"><h3>Accounting Intern</h3><div class="meta"><b>Bernhard Schulte Shipmanagement</b> &middot; Aug 2025 to Oct 2025</div><ul><li>Organized financial documents in line with company policy.</li><li>Entered and maintained financial data in Smart Pal.</li></ul></div></div><div class="job"><div class="box"><h3>Bookkeeper</h3><div class="meta"><b>Cafe Amadeo</b> &middot; Mar 2022 to Apr 2022</div><ul><li>Recorded transactions in 5 books.</li><li>Updated records in accounting software.</li></ul></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <span class="eyebrow">Portfolio</span>
+  <h2>Work samples</h2>
+  <p class="lead">Each sample shows the task, how it was done and the tools used. Click a picture to see it full size, or download the file.</p>
+  <span class="note">All samples use made-up companies and data, to keep real client information private.</span>
+  <div class="group"><h3>Bookkeeping and Reporting</h3><p>Reconciliations, receivables and reports that tie out.</p></div><div class="grid">
+  <article class="card" id="bank-rec">
+    <a class="preview img" href="images/bank-rec.png" target="_blank" title="Open full size"><img src="images/bank-rec.png" alt="Bank Reconciliation preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Bookkeeping</span>
+      <h4>Bank Reconciliation</h4>
+      <p class="task">Reconcile a cafe&#x27;s August cash book with its bank statement and explain every difference.</p>
+      <p class="how">Matched each cash book entry to the bank statement and found 6 reconciling items: a deposit in transit, 2 outstanding checks, a bounced (NSF) check, a service charge, interest earned, and a PHP 1,540 check recorded as PHP 1,450. Both sides reconcile to PHP 245,890.60, and I prepared the 4 adjusting journal entries.</p>
+      <p class="tools">Microsoft Excel (linked formulas, number formatting)</p>
+      <a class="btn small" href="files/01 Bank Reconciliation - Kape Luntian.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="ar-aging">
+    <a class="preview img" href="images/ar-aging.png" target="_blank" title="Open full size"><img src="images/ar-aging.png" alt="Accounts Receivable Aging preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Bookkeeping</span>
+      <h4>Accounts Receivable Aging</h4>
+      <p class="task">Show which catering clients owe money, how much, and for how long, so follow-ups start with the oldest.</p>
+      <p class="how">Calculated due dates and days past due for 15 invoices, sorted each into Current, 1-30, 31-60, 61-90 or Over 90 days, and summarized by customer. PHP 236,700 is unpaid and PHP 14,000 is over 90 days old. A built-in check confirms the summary matches the invoice list.</p>
+      <p class="tools">Microsoft Excel (date formulas, nested IF, SUMIFS)</p>
+      <a class="btn small" href="files/04 Accounts Receivable Aging - Kape Luntian.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="dashboard">
+    <a class="preview img" href="images/dashboard.png" target="_blank" title="Open full size"><img src="images/chart1.png" alt="Online Shop Sales Dashboard preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Reporting</span>
+      <h4>Online Shop Sales Dashboard</h4>
+      <p class="task">Turn 12 months of raw sales from Shopee, Lazada and a website into a one-page summary for the owner.</p>
+      <p class="how">Organized 180 rows of sales data, then built totals by month, product and channel with growth rates. The dashboard shows PHP 7,877,030 in revenue, December 2025 as the best month, the top product, and 2 charts. Everything recalculates when the data changes.</p>
+      <p class="tools">Microsoft Excel (SUMIFS, INDEX and MATCH, charts)</p>
+      <a class="btn small" href="files/02 Sales Dashboard - Tahanan Home Goods.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="reimbursement">
+    <a class="preview img" href="images/reimbursement.png" target="_blank" title="Open full size"><img src="images/reimbursement.png" alt="Refund and Reimbursement Tracker preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Ecommerce</span>
+      <h4>Refund and Reimbursement Tracker</h4>
+      <p class="task">Find refunded orders where the customer never sent the item back, so the seller can claim the money.</p>
+      <p class="how">Built a tracker that counts days since each refund, compares refunded and returned units, and labels each order Waiting, Closed, Fully reimbursed or Claim now. It found 5 orders worth PHP 3,870 to claim. The return window and rate are settings anyone can change.</p>
+      <p class="tools">Microsoft Excel (IF and AND logic, date math, conditional formatting)</p>
+      <a class="btn small" href="files/03 Refund and Reimbursement Tracker.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="cleanup">
+    <a class="preview img" href="images/cleanup-after.png" target="_blank" title="Open full size"><img src="images/cleanup-after.png" alt="Customer Data Cleanup preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Data</span>
+      <h4>Customer Data Cleanup</h4>
+      <p class="task">Clean an exported customer list with extra spaces, mixed capitals, messy phone numbers and repeated customers.</p>
+      <p class="how">Used formulas that read the raw list, so new rows clean themselves: proper-case names, lowercase emails, and every phone number in one 0917-123-4567 format. Flagged 2 duplicate customers and 2 phone numbers with missing or extra digits. <a class="inline" href="images/cleanup-before.png" target="_blank">See the list before cleanup.</a></p>
+      <p class="tools">Microsoft Excel (TRIM, PROPER, LOWER, SUBSTITUTE, COUNTIF)</p>
+      <a class="btn small" href="files/05 Customer Data Cleanup.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article></div><div class="group"><h3>Virtual Assistant and Customer Support</h3><p>Inbox, calendar, trackers, processes and customer replies.</p></div><div class="grid">
+  <article class="card" id="email-mgmt">
+    <a class="preview img" href="images/email-mgmt.png" target="_blank" title="Open full size"><img src="images/email-mgmt.png" alt="Email Management and Inbox Triage preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Virtual Assistance</span>
+      <h4>Email Management and Inbox Triage</h4>
+      <p class="task">Set up a system that sorts a busy inbox and makes sure every email is answered on time.</p>
+      <p class="how">Designed 7 color-coded labels, each with an automatic filter rule and a reply target, plus a daily inbox routine. Logged a 20-email shift: 11 of 12 replies were on time, the average reply took 1.1 hours, and 5 items were carried over with a clear status.</p>
+      <p class="tools">Gmail-style labels and filter rules, Microsoft Excel (COUNTIF, INDEX and MATCH)</p>
+      <a class="btn small" href="files/07 Email Management - Inbox Triage.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="calendar">
+    <a class="preview img" href="images/calendar.png" target="_blank" title="Open full size"><img src="images/calendar.png" alt="Calendar Setup preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Virtual Assistance</span>
+      <h4>Calendar Setup</h4>
+      <p class="task">Organize a week for a Los Angeles-based manager, working from Manila.</p>
+      <p class="how">Planned 31 events across 5 days with one color per type (meetings, focus work, admin, breaks, VA check-ins), showing Pacific and Manila time side by side. Wrote 9 calendar rules, such as buffers after calls, protected focus blocks and reminders.</p>
+      <p class="tools">Microsoft Excel, laid out the way Google Calendar shows a week</p>
+      <a class="btn small" href="files/08 Calendar Setup - Weekly Schedule.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="tracker">
+    <a class="preview img" href="images/tracker.png" target="_blank" title="Open full size"><img src="images/tracker.png" alt="Google Sheets Task Tracker preview" loading="lazy"><span class="zoom">View full size</span></a>
+    <div class="body">
+      <span class="tag">Virtual Assistance</span>
+      <h4>Google Sheets Task Tracker</h4>
+      <p class="task">Give a client one shared place to see every task, who owns it and what is late.</p>
+      <p class="how">Built a tracker with Priority and Status dropdowns, automatic Days left and Overdue / Due soon / Done flags, and a live summary box. Included a How to Use tab with the steps to import it into Google Sheets and share it with a client.</p>
+      <p class="tools">Google Sheets (dropdowns, conditional formatting, COUNTIF), built as a file ready to import</p>
+      <a class="btn small" href="files/09 Google Sheets Task Tracker.xlsx" download>Download Excel file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="emails">
+    <div class="preview text"><p class="subj"><b>Subject:</b> Update on your order ORD-10712</p>
+<p>Hi Carla,</p><p>Thank you for your patience, and sorry for the wait. Your order left our warehouse on September 24...</p>
+<p><b>Here is what I have already done:</b></p><ol><li>Asked the courier to prioritize your parcel.</li><li>Set a reminder to check the tracking again on Friday.</li></ol></div>
+    <div class="body">
+      <span class="tag">Customer Support</span>
+      <h4>Customer Email Samples</h4>
+      <p class="task">Reply to 3 common customer problems: a late order, a refund request and a wrong item.</p>
+      <p class="how">Wrote each reply to explain what happened, say what I had already done, and give clear numbered next steps, in plain and friendly English with no promises I could not keep.</p>
+      <p class="tools">Microsoft Word</p>
+      <a class="btn small" href="files/06 Customer Email Samples.docx" download>Download Word file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article>
+  <article class="card" id="sop">
+    <div class="preview text"><p class="subj"><b>SOP:</b> Handling a Customer Refund Request</p>
+<ol><li>Receive and log the request</li><li>Check the order and the reason</li><li>Decide: approve, ask for info, or escalate</li>
+<li>Send the return steps</li><li>Confirm the item came back</li><li>Issue the refund</li><li>Update the reimbursement tracker</li><li>Close the ticket</li></ol></div>
+    <div class="body">
+      <span class="tag">Process</span>
+      <h4>SOP: Handling a Refund Request</h4>
+      <p class="task">Write down the refund process so anyone on the team does it the same way every time.</p>
+      <p class="how">Wrote an 8-step standard operating procedure with roles, the tool used at each step, a workflow table, special cases, a closing checklist and time targets. It links to the email labels, the task tracker and the reimbursement tracker.</p>
+      <p class="tools">Microsoft Word</p>
+      <a class="btn small" href="files/10 SOP - Handling a Refund Request.docx" download>Download Word file <span aria-hidden="true">&darr;</span></a>
+    </div>
+  </article></div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's work together</h2>
+  <p>Open to full-time or part-time remote work. Send me a message and let's talk.</p>
+  <a class="btn" href="mailto:pleoxa@gmail.com">Email me</a>
+  <a class="btn ghost" href="files/00 Portfolio Summary.docx" download>Download summary</a>
+  <div class="contact"><a href="mailto:pleoxa@gmail.com">pleoxa@gmail.com</a> &middot; 0998 499 7247 &middot; Amadeo, Cavite, Philippines</div>
+  <small>&copy; 2026 Jade Kendra Marquez</small>
+</div></footer>
+</body>
+</html>
